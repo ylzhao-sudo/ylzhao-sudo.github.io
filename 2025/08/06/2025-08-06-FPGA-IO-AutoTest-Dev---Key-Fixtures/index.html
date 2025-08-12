@@ -153,7 +153,35 @@
         }
       }
       detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/main.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/friend_404.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Hey there!!"><span class="site-name">Hey there!!</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">FPGA IO AutoTest Dev - Key Fixtures</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-08-06T12:06:06.000Z" title="Created 2025-08-06 20:06:06">2025-08-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-06T12:06:06.000Z" title="Updated 2025-08-06 20:06:06">2025-08-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="FPGA IO AutoTest Dev - Key Fixtures"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="FPGA-IO-Auto-Test-Dev-Key-Fixtures"><a href="#FPGA-IO-Auto-Test-Dev-Key-Fixtures" class="headerlink" title="FPGA IO Auto Test Dev - Key Fixtures"></a>FPGA IO Auto Test Dev - Key Fixtures</h1><h2 id="Brief-introduction-of-test-process"><a href="#Brief-introduction-of-test-process" class="headerlink" title="Brief introduction of test process"></a>Brief introduction of test process</h2><p>start - run pytest -  @pytest.mark.IO  - run test function  - parameters correspond to the py_conftest operation fixtures (call fixture&#x2F;method - execute function) - perform the actual test actions (such as reset, download, etc) - each fixture completed - end</p>
+    })(window)</script><style>
+  /* 强制覆盖标题区样式 */
+  #page-header {
+    background: url(/images/Butterfly@2x.jpg) center/cover no-repeat !important;
+    height: 300px !important;
+    position: relative !important;
+  }
+  /* 半透明遮罩 */
+  #page-header::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0,0,0,0.3) !important;
+    z-index: 0 !important;
+  }
+  /* 导航菜单 */
+  #page-header nav {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  #page-header a {
+    color: white !important;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.8) !important;
+  }
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/friend_404.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Hey there!!"><span class="site-name">Hey there!!</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">FPGA IO AutoTest Dev - Key Fixtures</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-08-06T12:06:06.000Z" title="Created 2025-08-06 20:06:06">2025-08-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-06T12:06:06.000Z" title="Updated 2025-08-06 20:06:06">2025-08-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="FPGA IO AutoTest Dev - Key Fixtures"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="FPGA-IO-Auto-Test-Dev-Key-Fixtures"><a href="#FPGA-IO-Auto-Test-Dev-Key-Fixtures" class="headerlink" title="FPGA IO Auto Test Dev - Key Fixtures"></a>FPGA IO Auto Test Dev - Key Fixtures</h1><h2 id="Brief-introduction-of-test-process"><a href="#Brief-introduction-of-test-process" class="headerlink" title="Brief introduction of test process"></a>Brief introduction of test process</h2><p>start - run pytest -  @pytest.mark.IO  - run test function  - parameters correspond to the py_conftest operation fixtures (call fixture&#x2F;method - execute function) - perform the actual test actions (such as reset, download, etc) - each fixture completed - end</p>
 <p>For example:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def test(xxx, DUTx, config_DUTx, download_DUTx, logger, xxx, resetRole, re_downloadRole, resetType, xxx):</span><br></pre></td></tr></table></figure>
 
